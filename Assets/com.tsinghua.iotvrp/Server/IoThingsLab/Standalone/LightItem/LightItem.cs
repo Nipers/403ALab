@@ -59,5 +59,20 @@ namespace Tsinghua.HCI.IoTVRP
         {
             return _light;
         }
+
+        public void GestureControl(GestureEventData gestureEventData)
+        {
+            switch (gestureEventData.GestureType)
+            {
+                case GestureType.TurnOn:
+                    TurnOn();
+                    break;
+                case GestureType.TurnOff:
+                    TurnOff();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
